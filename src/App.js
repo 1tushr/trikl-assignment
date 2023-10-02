@@ -49,8 +49,8 @@ function App() {
       img.onload = () => {
         const fabricImage = new fabric.Image(img);
         fabricImage.set({
-          left: 0,
-          top: 0,
+          left: 200,
+          top: 200,
           scaleX: 0.5,
           scaleY: 0.5,
         });
@@ -62,7 +62,7 @@ function App() {
 
   const rotateImage = () => {
     if (image) {
-      const newRotationAngle = (rotationAngle + 90) % 360;
+      const newRotationAngle = (rotationAngle + 45) % 360;
       setRotationAngle(newRotationAngle);
       image.set({ angle: newRotationAngle });
       canvas.renderAll();
@@ -229,8 +229,8 @@ function App() {
             setCanvas(newCanvas);
           }
         }}
-        width={400}
-        height={400}
+        width={900}
+        height={900}
       ></canvas>
       <div>
         {overlayTexts.map((text, index) => (
